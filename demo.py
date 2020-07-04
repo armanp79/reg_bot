@@ -2,17 +2,21 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 
-# enter path to webdriver on your local device
-PATH = "/Users/Arman/chromedriver"
-#driver = webdriver.Chrome(PATH)
 
 #starting url
 s_url = "https://www.reg.uci.edu/registrar/soc/webreg.html"
-#username and password
-user, passwd = "apithawa","Ataraxia12q"
-code = "35580"
 
 response = False
+
+
+# ------ Enter your own credentials here ------- 
+user, passwd = "username","password"
+code = "class_code"
+
+# enter path to webdriver on your local device
+PATH = "enter path here"
+
+# -------------------------------------------------
 
 
 def login():
