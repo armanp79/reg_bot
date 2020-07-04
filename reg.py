@@ -37,18 +37,23 @@ def login():
         insert_code = driver.find_element_by_xpath("/html/body/center[1]/form[2]/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]/input")
         insert_code.send_keys(code + Keys.RETURN)
 
+        #check if class was successfully added
         try:
             driver.find_element_by_class_name("studyList")
             response = True
         except:
             response = False
 
+        
+        # logout and quit driver
         driver.find_element_by_class_name('WebRegButton.WebRegLogoutButton').click()
         driver.quit()
+        
         return response
     
     except:
         print('error')
+        # logout and quit driver
         driver.find_element_by_class_name('WebRegButton.WebRegLogoutButton').click()
         driver.quit()
 
